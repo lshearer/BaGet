@@ -54,11 +54,11 @@ namespace BaGet.Core
                     var packageId = symbolPackage.NuspecReader.GetId();
                     var packageVersion = symbolPackage.NuspecReader.GetVersion();
 
-                    var package = await _packages.FindOrNullAsync(packageId, packageVersion, includeUnlisted: true, cancellationToken);
-                    if (package == null)
-                    {
-                        return SymbolIndexingResult.PackageNotFound;
-                    }
+                    // var package = await _packages.FindOrNullAsync(packageId, packageVersion, includeUnlisted: true, cancellationToken);
+                    // if (package == null)
+                    // {
+                    //     return SymbolIndexingResult.PackageNotFound;
+                    // }
 
                     using (var pdbs = new PdbList())
                     {
